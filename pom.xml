@@ -19,7 +19,8 @@ specific language governing permissions and limitations
 under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         child.inherit.append.path="false">
   <modelVersion>4.0.0</modelVersion>
 
   <!-- for more information, see the documentation of this POM: https://maven.apache.org/pom/maven/ -->
@@ -846,7 +847,7 @@ under the License.
     <module>apache-resource-bundles</module>
   </modules>
 
-  <scm>
+  <scm child.inherit.append.path="false">
     <connection>scm:git:https://github.com/hboutemy/maven-parent.git</connection>
     <developerConnection>scm:git:https://github.com/hboutemy/maven-parent.git</developerConnection>
     <url>https://github.com/hboutemy/maven-parent/tree/${project.scm.tag}</url>
@@ -866,7 +867,7 @@ under the License.
     </notifiers>
   </ciManagement>
   <distributionManagement>
-    <site>
+    <site child.inherit.append.path="false">
       <id>apache.website</id>
       <url>scm:svn:https://svn.apache.org/repos/asf/maven/website/components/${maven.site.path}</url>
     </site>
